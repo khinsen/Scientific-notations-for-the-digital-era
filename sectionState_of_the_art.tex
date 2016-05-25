@@ -3,9 +3,10 @@
 
 In the last section I have listed the ingredients that need to be combined in order to make a solar system simulator. Let's look at how such a simulator is actually structured using today's scientific computing technology. We have the following clearly identifiable pieces:
 
-  1. A simulation program, written in a programming language such as Fortran or C++, which incorporates ingredients 1, 2, 5, 7, and 8.
-
-  2. An input file for that program, written in a special-purpose formal language defined by the author of the simulation program, containing ingredients 3, 4, and 6.
+\begin{enumerate}
+\item A simulation program, written in a programming language such as Fortran or C++, which incorporates ingredients 1, 2, 5, 7, and 8.
+\item An input file for that program, written in a special-purpose formal language defined by the author of the simulation program, containing ingredients 3, 4, and 6.
+\end{enumerate}
 
 The structure of the input file is usually simple, meaning that it is straightforward to isolate ingredients 3, 4, and 6 from it. There is even a good chance that the input file will permit annotation of these items, indicating the sources they were taken from. If we are really lucky, the formal language of the input file is documented and designed to permit the extraction of information for other uses.
 
