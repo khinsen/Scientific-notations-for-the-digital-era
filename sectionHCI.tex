@@ -16,15 +16,15 @@ A programming language fully defines the meaning of a program, and thus complete
 
 As an illustration, consider the following piece of Python code:
 
-```python
+\begin{verbatim}
 def product(numbers):
     result = 1
     for factor in numbers:
         result = result + factor
     return result
-```
+\end{verbatim}
 
-To a human reader, the names `product`, `numbers`, and `factor` clearly suggest that this procedure multiplies a list of numbers. A careful reader would notice the `+` sign, indicating addition rather than multiplication. The careful reader would thus conclude that this is a multiplication program containing a mistake. This is exactly how a scientist reads formulas in a journal article: their meaning is inferred from the meaning of all their constituents, using an understanding of the context and an awareness of the possibility of mistakes.
+To a human reader, the names \texttt{product}, \texttt{numbers}, and \texttt{factor} clearly suggest that this procedure multiplies a list of numbers. A careful reader would notice the \texttt{+} sign, indicating addition rather than multiplication. The careful reader would thus conclude that this is a multiplication program containing a mistake. This is exactly how a scientist reads formulas in a journal article: their meaning is inferred from the meaning of all their constituents, using an understanding of the context and an awareness of the possibility of mistakes.
 
 For a computer, the procedure shown above simply computes the sum of a list of numbers. The identifiers carry no meaning at all; all that matters is that different identifiers refer to different things. As a consequence, the above procedure is executed without any error message.
 
