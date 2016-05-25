@@ -6,4 +6,5 @@ sectionDigital_scientific_knowledge.tex
 sectionFormal_languages.tex
 sectionComposition.tex
 sectionState_of_the_art.tex
+sectionHCI.tex
 sectionThe_evolution.tex
