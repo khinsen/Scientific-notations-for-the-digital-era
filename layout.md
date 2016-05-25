@@ -4,7 +4,7 @@ structure_of_scientific_knowledge.tex
 evolution_of_scientific_communication.tex
 digital_scientific_knowledge.tex
 formal_languages.tex
-sectionComposition.tex
+composition.tex
 sectionState_of_the_art.tex
 sectionHCI.tex
 sectionSimple_and_flexible.tex
