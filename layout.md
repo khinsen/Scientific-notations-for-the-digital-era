@@ -7,4 +7,5 @@ sectionFormal_languages.tex
 sectionComposition.tex
 sectionState_of_the_art.tex
 sectionHCI.tex
+sectionSimple_and_flexible.tex
 sectionThe_evolution.tex
