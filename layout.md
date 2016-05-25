@@ -3,4 +3,5 @@ sectionIntroduction_.tex
 sectionThe_structure.tex
 section_The_evolution_of_scientific__.tex
 sectionDigital_scientific_knowledge.tex
+sectionFormal_languages.tex
 sectionThe_evolution.tex
