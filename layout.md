@@ -6,6 +6,6 @@ digital_scientific_knowledge.tex
 formal_languages.tex
 composition.tex
 state_of_the_art.tex
-sectionHCI.tex
+HCI.tex
 sectionSimple_and_flexible.tex
 sectionDesigning.tex
