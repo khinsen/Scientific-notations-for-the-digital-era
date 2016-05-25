@@ -1,0 +1,65 @@
+\section{Composition of information items}
+\label{composition}
+
+A key operation in information management is the composition of data from various sources into a more complex assembly. Composition is a well-known concept in software development, as software is usually assembled from building blocks (procedures, classes, modules, ...), including preexisting ones taken from libraries. But composition is also an everyday task in the theoretical sciences, even though it is not labeled as such and in fact rarely ever identified as a distinct activity.
+
+\subsection{Example: composing a model for the solar system}
+
+Suppose you want to predict the positions of the planets of our solar system over a few years. You would start with Newton's 17th-century description of celestial mechanics and compose a model from the following ingredients:
+
+\newcounter{myCounter}
+\begin{enumerate}
+\item Newton's law of motion:
+      $F = m \cdot a$
+\item Newton's law of gravitation:
+      $F_{ij} = G \frac{m_i \cdot m_j}{|r_i-r_j|^2}$
+\item The masses $m_i$ of the sun and the planets.
+\item A set of parameters, derived from past astronomical observations, to define the initial state.
+\setcounter{myCounter}{\theenumi}
+\end{enumerate}
+
+All these put together define the positions of the celestial bodies at all times in the past and future. But each of these items has a meaning independently of the others, and can be put to other uses, such as computing how fast an apple falls to the ground. You can also use the first two ingredients to prove energy conservation in celestial mechanics, or to derive Kepler's laws. Moreover, each of these pieces comes from a different source (observation, theoretical hypothesis, ...) that requires a specific approach to validation. We want to be able to compose them into a new entity called "model for the solar system", but we also want each piece to retain its own identity for other uses. Ideally, we want to present our solar system model as a composition that references the individual ingredients. And in the traditional printed-paper system of scientific communication, that's exactly what we do.
+
+Let's move on to computation. To make an actual prediction, you have to add some more ingredients. The model as composed above only \textit{defines} the planetary orbits, but doesn't tell you how to \textit{compute} them. So you need to add:
+
+\begin{enumerate}
+\setcounter{enumi}{\themyCounter}
+\item A numerical solver for ordinary differential equations (ODEs), such as Runge-Kutta.
+\item Suitable parameters for that solver, depending on your accuracy and precision requirements. For Runge-Kutta, that's the size of the integration time step.
+\item A finite-size number representation with associated rules for arithmetic, because you can't compute with real numbers.
+\setcounter{myCounter}{\theenumi}
+\end{enumerate}
+
+You can then take a large stock of pencils and paper and start to compute. If you prefer to delegate the grunt work to a computer, you need one final ingredient:
+
+\begin{enumerate}
+\setcounter{enumi}{\themyCounter}
+\item A programming language, implemented in the form of a compiler or interpreter.
+\end{enumerate}
+
+Your final composition is then a simulation program for celestial mechanics, made from eight distinct ingredients. Ideally, you would publish each ingredient and the composition separately as nine machine-readable nanopublications \cite{groth_anatomy_2010}. Unfortunately, with the current state of the art in computational science, that is not yet possible.
+
+\subsection{Composition of digital knowledge}
+\label{composition-digital}
+
+In the pre-digital era, composition was never much of a problem. A scientist would take a few research articles or monographs describing the various ingredients, and then write down their composition on a fresh sheet of paper. Variations in the notations across different sources would be no more than an inconvenience. Our pre-digital scientist would translate notation into concepts when reading each source, and the concepts into his or her preferred notation when writing down the composition. As long as the concepts match, as they do in any mature field of science, that is routine work.
+
+Composition of digital knowledge is very different. The items to be composed must be matched not only in terms of (human) concepts, but also in terms of the syntax and semantics of a formal language. And that means that all ingredients must be expressed in \textit{the same} formal language, which is then also the language of the composed assembly.
+
+If we start from ingredients expressed in different languages, we have basically two options: translate everything to a common language, or define a new formal language that is a superset of all the languages used for expressing the various ingredients. We can of course choose a mixture of these two extreme approaches. But both of them imply a lot of overhead and add considerable complexity to the composed assembly. Translation requires either tedious and error-prone manual labor, or writing a program to do the job. Defining a superlanguage requires implementing software tools for processing it.
+
+As an illustration, consider a frequent situation in computational science: a data processing program that reads a specific file format, and a dataset stored in a different format. The translation option means writing a file format converter. The superlanguage option means extending the data processing program to read a second file format. In both cases, the use of multiple formal languages adds complexity to the composition that is unrelated to the real problem to be solved, which is the data analysis. In software engineering, this is known as "accidental complexity", as opposed to the "essential complexity" inherent in the task \cite{brooks_no_1987}.
+
+As a second example, consider writing a program that is supposed to call a procedure written in language A and another procedure written in language B. The translation option means writing a compiler from A to B or vice-versa. The superlanguage option means writing a compiler or interpreter that accepts both languages A and B. A mixed approach could use two compilers, one for A and one for B, that share a common target language. The latter solution seems easy at first sight, because compilers from A and B to processor instructions probably already exist. However, the target language of a compiler is not "processor instructions" but "the processor instruction set plus specific representations of data structures and conventions for code composition and memory management". It is unlikely that two unrelated compilers for A and B have the same target language at this level of detail. Practice has shown that combining code written in different programming languages is always a source of trouble and errors, except when using tools that were explicitly designed from the start for implementing the superlanguage.
+
+Many of the chores and frustrations in the daily life of a computational scientist are manifestations of the composition problem for digital knowledge. Some examples are
+
+ - file format conversion, as explained above
+ - combining code in different languages, also explained above
+ - software installation, which is the composition of an operating system with libraries and application-specific software into a functioning whole
+ - package management, which is an attempt to facilitate software installation that re-creates the problem it tries to solve at another level
+ - software maintenance, which is the continuous modification of source code to keep it composable with changing computational environments
+ - I/O code in scientific software, which handles the composition of software and input data into a completely specified computation
+ - workflow management, which is the composition of datasets with multiple independently written and installed software packages into a single computation
+
+These examples should be sufficient to show that the management of composition must be a high-priority consideration when designing formal languages for digital scientific knowledge.
