@@ -3,21 +3,26 @@
 
 The main conclusion from the analysis that I have presented in this essay is that digital scientific notations should be based on formal languages with the following properties:
 
- - **Small and simple**: each formal language must be so small and simple that a scientist can memorize it easily and understand its semantics in detail.
+\begin{itemize}
+\item \textbf{Small and simple}: each formal language must be so small and simple that a scientist can memorize it easily and understand its semantics in detail.
 
- - **Flexible**: a scientist must be able to create modifications of existing languages used in his/her field in order to adapt them to new requirements and personal preferences.
+\item \textbf{Flexible}: a scientist must be able to create modifications of existing languages used in his/her field in order to adapt them to new requirements and personal preferences.
 
- - **Interoperable**: composition of digital knowledge items expressed in different languages must be possible with reasonable effort.
+\item \textbf{Interoperable}: composition of digital knowledge items expressed in different languages must be possible with reasonable effort.
+
+\end{itemize}
 
 The two examples (section~\ref{simple-and-flexible}) I have presented above suggest that a good approach is to define a framework of languages and implement generic tools for common manipulations. The foundation of this framework should provide basic data types and data structures:
 
- - numbers (integers, rationals, floating-point, machine-level integers)
- - symbols
- - text
- - N-dimensional arrays
- - trees
- - sets
- - key-value maps (also called associative arrays, hash tables, or dictionaries)
+\begin{itemize}
+\item numbers (integers, rationals, floating-point, machine-level integers)
+\item symbols
+\item text
+\item N-dimensional arrays
+\item trees
+\item sets
+\item key-value maps (also called associative arrays, hash tables, or dictionaries)
+\end{itemize}
 
 The representation of these fundamental data types in terms of bit sequences can be based on existing standards such as XML (text) or HDF5 (binary). It is probably inevitable to have multiple such representations to take into account conflicting requirements of different application domains. As long as automatic loss-less interconversion can be ensured, this should not be an obstacle to interoperability. An added advantage of keeping the lowest level of representation flexible is the possibility to adapt to future technological developments, for example IPFS \cite{benet_ipfs_2014} whose "permanent Web" approach seems well adapted to preserving the scientific record.
 
