@@ -8,4 +8,4 @@ composition.tex
 state_of_the_art.tex
 HCI.tex
 simple_and_flexible.tex
-sectionDesigning.tex
+designing.tex
