@@ -2,7 +2,7 @@ abstract.tex
 introduction.tex
 structure_of_scientific_knowledge.tex
 evolution_of_scientific_communication.tex
-sectionDigital_scientific_knowledge.tex
+digital_scientific_knowledge.tex
 sectionFormal_languages.tex
 sectionComposition.tex
 sectionState_of_the_art.tex
