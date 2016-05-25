@@ -3,7 +3,7 @@ introduction.tex
 structure_of_scientific_knowledge.tex
 evolution_of_scientific_communication.tex
 digital_scientific_knowledge.tex
-sectionFormal_languages.tex
+formal_languages.tex
 sectionComposition.tex
 sectionState_of_the_art.tex
 sectionHCI.tex
