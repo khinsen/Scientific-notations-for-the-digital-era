@@ -7,5 +7,5 @@ formal_languages.tex
 composition.tex
 state_of_the_art.tex
 HCI.tex
-sectionSimple_and_flexible.tex
+simple_and_flexible.tex
 sectionDesigning.tex
