@@ -9,4 +9,3 @@ sectionState_of_the_art.tex
 sectionHCI.tex
 sectionSimple_and_flexible.tex
 sectionDesigning.tex
-theEnd.tex
